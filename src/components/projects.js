@@ -1,26 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import { ExperienceContainer } from "../styles";
 
 const projects = [
   {
-    role: "Software Engineer",
-    company: "Citylitics",
-    date: "Sept 2022 - Present",
-    location: "Toronto",
+    project: "PricePal",
+    description: "PricePal is a web app that helps you find the best deals on Amazon. It uses a web scraper to scrape Amazon and then uses a machine learning model to predict the best deals.",
+    link: "",
     tech: "React, Django, Docker, GCP",
-    description: "Citylitics is a startup that processes infrastructure data to help clients find new business opportunities.",
-    link: "https://citylitics.com/",
-    icon: ""
-  },
+  }
 ];
-
-const ProjectContainer = styled.div`
-  margin-top: 32px;
-`;
 
 export const Projects = () => {
   return (
     <>
+      {projects.map(({ project, description, link, tech }) => {
+        return (
+          <ExperienceContainer key={project}>
+            <h3>{project}</h3>
+            <p>{description}</p>
+            <a href={link}>{link}</a>
+            <h5>{tech}</h5>
+          </ExperienceContainer>
+        );
+      })}
     </>
   );
 };

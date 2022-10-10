@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { ExperienceContainer } from "../styles";
 
-const experiences = [
+const jobs = [
   {
     role: "Software Engineer",
     company: "Citylitics",
@@ -14,13 +15,22 @@ const experiences = [
   },
 ];
 
-const ExperienceContainer = styled.div`
-  margin-top: 32px;
-`;
-
 export const Jobs = () => {
   return (
     <>
+      {jobs.map(({ role, company, date, location, tech, description, link, icon }) => {
+        return (
+          <ExperienceContainer key={company}>
+            <h3>{role}</h3>
+            <h4>{company}</h4>
+            <h5>{date}</h5>
+            <h5>{location}</h5>
+            <h5>{tech}</h5>
+            <p>{description}</p>
+            <a href={link}>{link}</a>
+          </ExperienceContainer>
+        );
+      })}
     </>
   );
 };

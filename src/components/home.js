@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./header";
 import styled from "styled-components";
 import { MainContainer } from "../styles";
-import Footer from "./footer";
+import { Footer } from "./footer";
 
 const AboutMe = styled.p`
   line-height: 1.75;

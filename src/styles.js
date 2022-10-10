@@ -5,8 +5,15 @@ export const MainContainer = styled.div`
   text-align: left;
   flex-direction: column;
   margin: auto;
-  max-width: 400px;
+  max-width: 600px;
+  
 
   @media (min-width: 768px) { 
   }
+`;
+
+export const ExperienceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 `;

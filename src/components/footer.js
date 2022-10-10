@@ -31,7 +31,7 @@ const links = [
   }
 ];
 
-export default function Footer(){
+export const Footer = () => {
   return (
     <Container>
       {links.map(({ link, icon }) => {

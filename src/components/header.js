@@ -7,12 +7,11 @@ import Moon from "../assets/moon.svg";
 
 const Nav = styled.header`
   margin-top: 100px;
-  background-color:  #BE97D0;
+  background-color:  #B1B8E6;
   padding: 20px;
-  width: 100%;
+  width: 580px;
   color: white;
   border-radius: 5px;
-  color: #F2F2F2;
 
 `;
 
@@ -39,14 +38,13 @@ const Icon = styled.img`
 const MoonIcon = styled.img`
   width: 20px;
   padding: 2px;
-`
+  padding-top: 5px;
+`;
 
 const NavLinks = styled(NavLink)`
   text-decoration: none;
   margin-right: 7px;
-  margin-left: 7px;
-  color: #F2F2F2;
-
+  color: white;
 
   &:hover {
     text-decoration: underline;
@@ -80,7 +78,7 @@ export default function Header() {
       </Title>
       <NavLinks to="/">about</NavLinks>
       |
-      <NavLinks to="/experience">experience</NavLinks>
+      <NavLinks style={{marginLeft: "7px"}} to="/experience">experience</NavLinks>
     </Nav>
   );
 }

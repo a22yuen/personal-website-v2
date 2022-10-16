@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { ExperienceContainer } from "../styles";
+import { ExperienceContainer, Link, Title, Subtitle  } from "../styles";
 
 const projects = [
   {
     project: "PricePal",
     description: "PricePal is a web app that helps you find the best deals on Amazon. It uses a web scraper to scrape Amazon and then uses a machine learning model to predict the best deals.",
-    link: "",
-    tech: "React, Django, Docker, GCP",
+    link: "https://github.com/bill-li1/PricePal",
+    tech: "React, GraphQL, Mongoose",
   }
 ];
 
@@ -17,10 +17,8 @@ export const Projects = () => {
       {projects.map(({ project, description, link, tech }) => {
         return (
           <ExperienceContainer key={project}>
-            <h3>{project}</h3>
+            <Title><Link href={link}>{project}</Link> | <Subtitle>{tech}</Subtitle></Title>
             <p>{description}</p>
-            <a href={link}>{link}</a>
-            <h5>{tech}</h5>
           </ExperienceContainer>
         );
       })}

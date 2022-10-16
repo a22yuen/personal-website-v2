@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ExperienceContainer } from "../styles";
+import { ExperienceContainer, Link, Title, Subtitle } from "../styles";
 
 const jobs = [
   {
@@ -13,7 +13,35 @@ const jobs = [
     link: "https://citylitics.com/",
     icon: ""
   },
+  {
+    role: "Full Stack Developer",
+    company: "LCBO|Next",
+    date: "Jan 2022 - Apr 2022",
+    location: "Toronto",
+    tech: "React, Flask, Azure, Kubernetes, Docker",
+    description: "Developed responsive web interface for LCBO's internal teams to manage their data.",
+    link: "https://www.lcbonext.com/",
+    icon: ""
+  },{
+    role: "Junior Software Developer",
+    company: "Healthconnex incorporated",
+    date: "May 2021 - Dec 2021",
+    location: "Toronto",
+    tech: "Vue.js, Typescript, AWS S3 & Lambda, Serverless Framework",
+    description: "Developed Lambda microservice to dynamically generate pdf reports for clients.",
+    link: "https://www.lcbonext.com/",
+    icon: ""
+  },
 ];
+
+const Description = styled.h4`
+  margin: 0;
+  font-weight: 400;
+`;
+
+const Tech = styled.h4`
+  margin: 10px 0;
+`;
 
 export const Jobs = () => {
   return (
@@ -21,13 +49,9 @@ export const Jobs = () => {
       {jobs.map(({ role, company, date, location, tech, description, link, icon }) => {
         return (
           <ExperienceContainer key={company}>
-            <h3>{role}</h3>
-            <h4>{company}</h4>
-            <h5>{date}</h5>
-            <h5>{location}</h5>
-            <h5>{tech}</h5>
-            <p>{description}</p>
-            <a href={link}>{link}</a>
+            <Title>{role} @ <Link href={link}>{company}</Link> | <Subtitle>{date}</Subtitle></Title>
+            <Tech>{location} | {tech}</Tech>
+            <Description>{description}</Description>
           </ExperienceContainer>
         );
       })}

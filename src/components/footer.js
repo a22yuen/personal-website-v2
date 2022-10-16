@@ -18,12 +18,12 @@ const Container = styled.div`
 
 const links = [
   {
-    link: "https://github.com/a22yuen",
-    icon: GitHub,
-  },
-  {
     link: "https://www.linkedin.com/in/a22yuen/",
     icon: LinkedIn,
+  },
+  {
+    link: "https://github.com/a22yuen",
+    icon: GitHub,
   },
   {
     link: "mailto:a22yuen@uwaterloo.ca",

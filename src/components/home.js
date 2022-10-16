@@ -20,16 +20,18 @@ export default function Home() {
       <Header />
       <Title><h1>Hey!</h1></Title>
       <AboutMe>
-        I'm Anson, a software engineer based in Toronto, Canada. I'm currently
-        working at{" "}
-        <a href="https://www.ubisoft.com/en-ca/" target="_blank">
-          Ubisoft
-        </a>{" "}
-        on{" "}
-        <a href="https://www.ubisoft.com/en-ca/game/assassins-creed/valhalla" target="_blank">
-          Assassin's Creed Valhalla
-        </a>
-        . I'm passionate about building great software and learning new things.
+        I'm Anson, a third-year computer science student in University of Waterloo. I'm currently interning as 
+        a Software Developer at {" "}
+        <a href="https://citylitics.com/" target="_blank">Citylitics</a>.
+        <br />
+        <br />
+        I'm always focused on building and working on projects that leave a lasting 
+        impact, regardless of scope. This could be creating a personal project for a nuanced purpose,
+        implementing features for my company's next release, or writing documentation to save time for future users.
+        <br />
+        <br />
+        I enjoy trying new cuisines, playing indie video games, and working out! 
+        I love to talk; I have a stance on topic, and if I don't know, I'll learn it.  
       </AboutMe>
       <Footer/>
     </MainContainer>

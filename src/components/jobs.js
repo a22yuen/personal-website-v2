@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ExperienceContainer, Link, Title, Subtitle } from "../styles";
+import { ExperienceContainer, Link, Title, Subtitle, Description } from "../styles";
 
 const jobs = [
   {
@@ -24,7 +24,7 @@ const jobs = [
     icon: ""
   },{
     role: "Junior Software Developer",
-    company: "Healthconnex incorporated",
+    company: "Healthconnex",
     date: "May 2021 - Dec 2021",
     location: "Toronto",
     tech: "Vue.js, Typescript, AWS S3 & Lambda, Serverless Framework",
@@ -34,13 +34,13 @@ const jobs = [
   },
 ];
 
-const Description = styled.h4`
+const Tech = styled.h5`
   margin: 0;
-  font-weight: 400;
+  margin-bottom: 10px;
 `;
 
-const Tech = styled.h4`
-  margin: 10px 0;
+const Company = styled(Link)`
+  font-weight: 400;
 `;
 
 export const Jobs = () => {
@@ -49,7 +49,7 @@ export const Jobs = () => {
       {jobs.map(({ role, company, date, location, tech, description, link, icon }) => {
         return (
           <ExperienceContainer key={company}>
-            <Title>{role} @ <Link href={link}>{company}</Link> | <Subtitle>{date}</Subtitle></Title>
+            <Title>{role} @ <Company href={link}>{company}</Company> | <Subtitle>{date}</Subtitle></Title>
             <Tech>{location} | {tech}</Tech>
             <Description>{description}</Description>
           </ExperienceContainer>

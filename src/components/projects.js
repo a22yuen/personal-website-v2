@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ExperienceContainer, Link, Title, Subtitle  } from "../styles";
+import { ExperienceContainer, Link, Title, Subtitle, Description  } from "../styles";
 
 const projects = [
   {
@@ -18,7 +18,7 @@ export const Projects = () => {
         return (
           <ExperienceContainer key={project}>
             <Title><Link href={link}>{project}</Link> | <Subtitle>{tech}</Subtitle></Title>
-            <p>{description}</p>
+            <Description>{description}</Description>
           </ExperienceContainer>
         );
       })}

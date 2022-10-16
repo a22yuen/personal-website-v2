@@ -17,10 +17,10 @@ const Title = styled.h1`
 const Line = styled.hr`
   border: 0;
   border-top: 2px solid black;
-  width: 35%;
+  width: 28%;
   margin: 0;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 export default function Experiences() {

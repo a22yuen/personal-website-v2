@@ -3,6 +3,7 @@ import styled from "styled-components";
 import LinkedIn from "../assets/linkedin.svg";
 import GitHub from "../assets/github.svg";
 import Mail from "../assets/mail.svg";
+import Resume from "../assets/resume.png";
 
 const Icon = styled.img`
   margin-right: 35px;
@@ -28,6 +29,10 @@ const links = [
   {
     link: "mailto:a22yuen@uwaterloo.ca",
     icon: Mail,
+  },
+  {
+    link: "",
+    icon: Resume,
   }
 ];
 

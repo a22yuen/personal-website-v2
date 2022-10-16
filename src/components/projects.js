@@ -1,14 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-import { ExperienceContainer, Link, Title, Subtitle, Description  } from "../styles";
+import {
+  ExperienceContainer,
+  Link,
+  Title,
+  Subtitle,
+  Description,
+} from "../styles";
 
 const projects = [
   {
+    project: "Personal Website",
+    description: "This website! Used to showcase my projects and experiences.",
+    link: "https://github.com/a22yuen/personal-website-v2",
+    tech: "React, Styled Components",
+  },
+  {
     project: "PricePal",
-    description: "PricePal is a web app that helps you find the best deals on Amazon. It uses a web scraper to scrape Amazon and then uses a machine learning model to predict the best deals.",
+    description:
+      "A web app that tracks debts and splits expenses between friends.",
     link: "https://github.com/bill-li1/PricePal",
     tech: "React, GraphQL, Mongoose",
-  }
+  },
+  {
+    project: "Food Experiences",
+    description:
+      "A web app that allows users to share their food experiences with others. Users can create posts, comment on posts, and like posts.",
+    link: "https://github.com/a22yuen/food-experiences",
+    tech: "React, MongoDB, Express",
+  },
 ];
 
 export const Projects = () => {
@@ -17,7 +37,9 @@ export const Projects = () => {
       {projects.map(({ project, description, link, tech }) => {
         return (
           <ExperienceContainer key={project}>
-            <Title><Link href={link}>{project}</Link> | <Subtitle>{tech}</Subtitle></Title>
+            <Title>
+              <Link href={link}>{project}</Link> | <Subtitle>{tech}</Subtitle>
+            </Title>
             <Description>{description}</Description>
           </ExperienceContainer>
         );

@@ -6,13 +6,14 @@ import Flowey from "../assets/flowey.png";
 import Moon from "../assets/moon.svg";
 
 const Nav = styled.header`
+  margin: auto;
   margin-top: 100px;
-  background-color:  #B1B8E6;
+  margin-bottom: 20px;
+  background-color: #b1b8e6;
   padding: 20px;
-  width: 580px;
+  width: 665px;
   color: white;
   border-radius: 5px;
-
 `;
 
 const Button = styled.button`
@@ -26,7 +27,7 @@ const Title = styled.div`
   padding-bottom: 5px;
   font-size: 25px;
   position: relative;
-`
+`;
 
 const Icon = styled.img`
   margin-left: 10px;
@@ -53,9 +54,7 @@ const NavLinks = styled(NavLink)`
   }
 `;
 
-
 export default function Header() {
-
   const [theme, setTheme] = React.useState("light");
 
   const toggleTheme = () => {
@@ -73,12 +72,15 @@ export default function Header() {
     <Nav>
       <Title>
         Anson Yuen
-      <Icon src={Flowey}/>
-      <Button onClick={toggleTheme}><MoonIcon src={Moon}/></Button>
+        <Icon src={Flowey} />
+        <Button onClick={toggleTheme}>
+          <MoonIcon src={Moon} />
+        </Button>
       </Title>
-      <NavLinks to="/">about</NavLinks>
-      |
-      <NavLinks style={{marginLeft: "7px"}} to="/experience">experience</NavLinks>
+      <NavLinks to="/">about</NavLinks>|
+      <NavLinks style={{ marginLeft: "7px" }} to="/experience">
+        experience
+      </NavLinks>
     </Nav>
   );
 }

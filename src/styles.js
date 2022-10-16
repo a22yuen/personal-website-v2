@@ -5,10 +5,9 @@ export const MainContainer = styled.div`
   text-align: left;
   flex-direction: column;
   margin: auto;
-  max-width: 600px;
-  
+  max-width: 660px;
 
-  @media (min-width: 768px) { 
+  @media (min-width: 768px) {
   }
 `;
 
@@ -18,30 +17,28 @@ export const ExperienceContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 600px;
+  width: auto;
   padding: 13px;
   margin-left: 10px;
   margin-bottom: 20px;
   position: relative;
 
-  &:before{
+  &:before {
     position: absolute;
     width: 80px;
     height: 30px;
     border-radius: 5px 0px;
     content: "";
-  }
-
-  &:before {
+    z-index: -1;
     left: 0;
     top: 0;
     border-left: ${border};
     border-top: ${border};
   }
-
 `;
 
-export const Title = styled.h4`
+export const Title = styled.h3`
+  font-size: 1.1rem;
   margin: 0;
   margin-bottom: 10px;
 `;
@@ -52,7 +49,7 @@ export const Subtitle = styled.h4`
   font-weight: 400;
 `;
 
-export const Description = styled.h5`
+export const Description = styled.h4`
   margin: 0;
   font-weight: 400;
 `;

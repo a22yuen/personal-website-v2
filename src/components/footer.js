@@ -33,7 +33,7 @@ const links = [
   {
     link: "",
     icon: Resume,
-  }
+  },
 ];
 
 export const Footer = () => {
@@ -41,7 +41,9 @@ export const Footer = () => {
     <Container>
       {links.map(({ link, icon }) => {
         return (
-          <a key={link} href={link}><Icon src={icon}/></a>
+          <a key={link} href={link}>
+            <Icon src={icon} />
+          </a>
         );
       })}
     </Container>

@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./fonts/Atkinson-Hyperlegible-Regular.ttf";
+import "./fonts/Atkinson-Hyperlegible-Bold.ttf";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

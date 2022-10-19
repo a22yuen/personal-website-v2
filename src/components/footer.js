@@ -9,7 +9,7 @@ const Icon = styled.img`
   margin-right: 35px;
   width: 20px;
   height: 20px;
-  color: "black";
+  color: ${props => props.theme.color};
 `;
 
 const Container = styled.div`

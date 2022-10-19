@@ -1,11 +1,10 @@
 //react navbar component with 2 links
-import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Flowey from "../assets/flowey.png";
 import Moon from "../assets/moon.svg";
 import Sun from "../assets/sun.svg";
-import { ThemeContext } from "../App.js";
+import { useTheme } from "styled-components";
 
 const Nav = styled.header`
   margin: auto;
@@ -14,7 +13,7 @@ const Nav = styled.header`
   background-color: #b1b8e6;
   padding: 20px;
   width: 665px;
-  color: ${props => props.isDark ? "black" : "white"};
+  color: #ffffff;
   border-radius: 5px;
 `;
 
@@ -48,7 +47,7 @@ const ToggleIcon = styled.img`
 const NavLinks = styled(NavLink)`
   text-decoration: none;
   margin-right: 7px;
-  color: inherit;
+  color: white;
   font-size: 1.2rem;
 
   &:hover {
@@ -59,10 +58,11 @@ const NavLinks = styled(NavLink)`
 `;
 
 export default function Header() {
-  const { isDark, setDark } = useContext(ThemeContext);
+  const { setDark } = useTheme();
+  const isDark = useTheme().color === "white";
 
   return (
-    <Nav isDark={isDark}>
+    <Nav>
       <Title>
         Anson Yuen
         <Icon src={Flowey} />

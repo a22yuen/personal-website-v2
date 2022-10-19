@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./header";
 import styled from "styled-components";
-import { MainContainer } from "../styles";
+import { MainContainer, Link } from "../styles";
 import { Footer } from "./footer";
 
 const AboutMe = styled.p`
@@ -25,9 +25,9 @@ export default function Home() {
         <AboutMe>
           I'm Anson, a third-year computer science student in University of
           Waterloo. I'm currently interning as a Software Developer at{" "}
-          <a href="https://citylitics.com/" target="_blank">
+          <Link href="https://citylitics.com/" target="_blank">
             Citylitics
-          </a>
+          </Link>
           .
           <br />
           <br />

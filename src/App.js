@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={isDark ? {...light, setDark: toggleDark } : {...dark, setDark: toggleDark }}>
+    <ThemeProvider theme={isDark ? {...dark, setDark: toggleDark } : {...light, setDark: toggleDark }}>
     <GlobalStyle/>
     <BrowserRouter>
       <Routes>

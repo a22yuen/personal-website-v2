@@ -33,7 +33,7 @@ const links = [
     icon: Mail,
   },
   {
-    link: "",
+    link: "https://drive.google.com/file/d/1HwafjO8eB_mmmsCZg1VpyD5BWd8Ee4A8/view?usp=sharing",
     icon: Resume,
   },
 ];

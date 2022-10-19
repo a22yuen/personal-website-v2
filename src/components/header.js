@@ -27,6 +27,7 @@ const Title = styled.div`
   padding-bottom: 5px;
   font-size: 25px;
   position: relative;
+  font-size: 1.8rem;
 `;
 
 const Icon = styled.img`
@@ -46,6 +47,7 @@ const NavLinks = styled(NavLink)`
   text-decoration: none;
   margin-right: 7px;
   color: white;
+  font-size: 1.2rem;
 
   &:hover {
     text-decoration: underline;

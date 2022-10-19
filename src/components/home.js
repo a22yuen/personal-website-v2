@@ -7,10 +7,10 @@ import { Footer } from "./footer";
 const AboutMe = styled.p`
   line-height: 1.75;
   margin: 0 0 30px;
+  font-size: 1.15rem;
 `;
 
 const Title = styled.div`
-  background-color: ;
   width: auto;
 `;
 

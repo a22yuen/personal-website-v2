@@ -9,7 +9,7 @@ import "./fonts/Atkinson-Hyperlegible-Bold.ttf";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+      <App />
   </React.StrictMode>
 );
 

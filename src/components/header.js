@@ -1,9 +1,11 @@
 //react navbar component with 2 links
-import React from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Flowey from "../assets/flowey.png";
 import Moon from "../assets/moon.svg";
+import Sun from "../assets/sun.svg";
+import { ThemeContext } from "../App.js";
 
 const Nav = styled.header`
   margin: auto;
@@ -12,7 +14,7 @@ const Nav = styled.header`
   background-color: #b1b8e6;
   padding: 20px;
   width: 665px;
-  color: white;
+  color: ${props => props.isDark ? "black" : "white"};
   border-radius: 5px;
 `;
 
@@ -37,7 +39,7 @@ const Icon = styled.img`
   bottom: 0;
 `;
 
-const MoonIcon = styled.img`
+const ToggleIcon = styled.img`
   width: 20px;
   padding: 2px;
   padding-top: 5px;
@@ -46,7 +48,7 @@ const MoonIcon = styled.img`
 const NavLinks = styled(NavLink)`
   text-decoration: none;
   margin-right: 7px;
-  color: white;
+  color: inherit;
   font-size: 1.2rem;
 
   &:hover {
@@ -57,26 +59,15 @@ const NavLinks = styled(NavLink)`
 `;
 
 export default function Header() {
-  const [theme, setTheme] = React.useState("light");
-
-  const toggleTheme = () => {
-    console.log("toggle theme");
-    if (theme === "light") {
-      setTheme("dark");
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      setTheme("light");
-      document.documentElement.setAttribute("data-theme", "light");
-    }
-  };
+  const { isDark, setDark } = useContext(ThemeContext);
 
   return (
-    <Nav>
+    <Nav isDark={isDark}>
       <Title>
         Anson Yuen
         <Icon src={Flowey} />
-        <Button onClick={toggleTheme}>
-          <MoonIcon src={Moon} />
+        <Button onClick={setDark}>
+          <ToggleIcon src={isDark ? Sun : Moon} />
         </Button>
       </Title>
       <NavLinks to="/">about</NavLinks>|

@@ -13,7 +13,7 @@ const Nav = styled.header`
   margin-bottom: 20px;
   background-color: ${(props) => props.theme.header};
   padding: 20px;
-  width: 665px;
+  max-width: 665px;
   border-radius: 5px;
   color: ${(props) => props.theme.headerText};
 `;
@@ -53,7 +53,7 @@ const Playing = styled.a`
   color: ${(props) => props.theme.headerText};
   text-decoration: none;
   float: right;
-  font-size: 0.8rem;
+  font-size: 12.8;
 
   &:hover {
     text-decoration: underline;
@@ -75,7 +75,7 @@ const NavLinks = styled(NavLink)`
 
 export default function Header() {
   const { backgroundColor, setDark } = useTheme();
-  const [playMusic, setMusic] = useState(false);
+  const [playMusic, setMusic] = useState(backgroundColor === "black");
 
   const music = useRef();
 

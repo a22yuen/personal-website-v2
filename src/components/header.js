@@ -1,11 +1,9 @@
-import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Flowey from "../assets/flowey.png";
 import Moon from "../assets/moon.svg";
 import Sun from "../assets/sun.svg";
 import { useTheme } from "styled-components";
-import vibes from "../assets/its-raining-somewhere-else.mp3";
 
 const Nav = styled.header`
   margin: auto;
@@ -74,24 +72,15 @@ const NavLinks = styled(NavLink)`
 `;
 
 export default function Header() {
-  const { backgroundColor, setDark } = useTheme();
-  const [playMusic, setMusic] = useState(backgroundColor === "black");
-
-  const music = useRef();
-
-  useEffect(() => {
-    music.current.volume = `0.1`;
-    playMusic ? music.current.play() : music.current.pause();
-  }, [playMusic]);
+  const { backgroundColor, toggleDark } = useTheme();
 
   const toggleTheme = () => {
-    setDark();
+    toggleDark();
     setMusic(!playMusic);
   };
 
   return (
     <Nav>
-      <audio src={vibes} autoPlay ref={music} />
       <Title>
         Anson Yuen
         <Icon src={Flowey} />

@@ -9,7 +9,7 @@ const Icon = styled.img`
   margin-right: 35px;
   width: 20px;
   height: 20px;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
 `;
 
 const Container = styled.div`
@@ -43,7 +43,7 @@ export const Footer = () => {
     <Container>
       {links.map(({ link, icon }) => {
         return (
-          <a key={link} href={link}>
+          <a target="_blank" key={link} href={link}>
             <Icon src={icon} />
           </a>
         );

@@ -6,21 +6,25 @@ export const MainContainer = styled.div`
   flex-direction: column;
   margin: auto;
   max-width: 660px;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
   @media (min-width: 768px) {
   }
 `;
 
 export const light = {
-  color : "black",
+  color: "black",
   backgroundColor: "white",
-}
+  header: "#b1b8e6",
+  headerText: "white",
+};
 export const dark = {
-  color : "white",
+  color: "#aaaaaa",
   backgroundColor: "black",
-}
+  header: "#4859c4",
+  headerText: "#bababa",
+};
 
-const border = "2px solid #D3D3D3";
+const border = `2px solid`;
 
 export const ExperienceContainer = styled.div`
   display: flex;
@@ -31,6 +35,7 @@ export const ExperienceContainer = styled.div`
   margin-left: 10px;
   margin-bottom: 20px;
   position: relative;
+  color: ${(props) => props.theme.color};
 
   &:before {
     position: absolute;
@@ -50,7 +55,7 @@ export const Title = styled.h3`
   font-size: 1.25rem;
   margin: 0;
   margin-bottom: 10px;
-  color: inherit
+  color: inherit;
 `;
 
 export const Subtitle = styled.h4`
@@ -58,14 +63,14 @@ export const Subtitle = styled.h4`
   display: inline;
   font-weight: 400;
   font-size: 1.15rem;
-  color: inherit
+  color: inherit;
 `;
 
 export const Description = styled.h4`
   margin: 0;
   font-weight: 400;
   font-size: 1.15rem;
-  color: inherit
+  color: inherit;
 `;
 
 export const Link = styled.a`

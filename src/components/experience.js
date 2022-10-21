@@ -16,7 +16,7 @@ const Title = styled.h1`
 `;
 const Line = styled.hr`
   border: 0;
-  border-top: 2px solid black;
+  border-top: 2px solid ${props => props.theme.color};
   width: 28%;
   margin: 0;
   margin-top: 5px;

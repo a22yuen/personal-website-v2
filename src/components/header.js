@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Flowey from "../assets/flowey.png";
 import Moon from "../assets/moon.svg";
 import Sun from "../assets/sun.svg";
 import { useTheme } from "styled-components";
-import vibes from "../assets/its-raining-somewhere-else.mp3";
+import { Link } from "react-router-dom";
 
 const Nav = styled.header`
   margin: auto;
@@ -60,7 +59,7 @@ const Playing = styled.a`
   }
 `;
 
-const NavLinks = styled(NavLink)`
+const NavLinks = styled(Link)`
   text-decoration: none;
   margin-right: 7px;
   color: inherit;
@@ -74,36 +73,26 @@ const NavLinks = styled(NavLink)`
 `;
 
 export default function Header() {
-  const { backgroundColor, setDark } = useTheme();
-  const [playMusic, setMusic] = useState(backgroundColor === "black");
-
-  const music = useRef();
-
-  useEffect(() => {
-    music.current.volume = `0.1`;
-    playMusic ? music.current.play() : music.current.pause();
-  }, [playMusic]);
+  const { backgroundColor, toggleDark, isDark } = useTheme();
 
   const toggleTheme = () => {
-    setDark();
-    setMusic(!playMusic);
+    toggleDark();
   };
 
   return (
     <Nav>
-      <audio src={vibes} autoPlay ref={music} />
       <Title>
         Anson Yuen
         <Icon src={Flowey} />
         <Button onClick={toggleTheme}>
-          <ToggleIcon src={backgroundColor === "black" ? Sun : Moon} />
+          <ToggleIcon src={isDark ? Sun : Moon} />
         </Button>
       </Title>
       <NavLinks to="/">about</NavLinks>|
       <NavLinks style={{ marginLeft: "7px" }} to="/experience">
         experience
       </NavLinks>
-      {playMusic ? (
+      {isDark ? (
         <Playing
           target="_blank"
           href="https://www.youtube.com/watch?v=zNd4apsr3WE"

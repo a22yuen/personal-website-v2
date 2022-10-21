@@ -78,5 +78,6 @@ export const Link = styled.a`
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 `;

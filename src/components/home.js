@@ -36,10 +36,10 @@ export default function Home() {
           project for a nuanced purpose, implementing features for my company's
           next release, or writing documentation to save time for future users.
           <br />
-          <br />
-          I enjoy trying new cuisines, playing indie video games, and
+          <br />I enjoy trying new cuisines, playing indie video games, and
           working out! I love to talk; I have a stance on topic, and if I don't
-          know, I'll learn it. Feel free to reach out if you're interested in talking!
+          know, I'll learn it. Feel free to reach out if you're interested in
+          talking!
         </AboutMe>
         <Footer />
       </MainContainer>

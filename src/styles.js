@@ -13,18 +13,20 @@ export const MainContainer = styled.div`
 
 export const light = {
   color: "black",
+  border: "1px solid #5a5a5a",
   backgroundColor: "white",
   header: "#b1b8e6",
   headerText: "white",
 };
 export const dark = {
   color: "#aaaaaa",
+  border: "1px solid #bababa",
   backgroundColor: "black",
   header: "#4859c4",
   headerText: "#bababa",
 };
 
-const border = `2px solid`;
+const border = `1px solid`;
 
 export const ExperienceContainer = styled.div`
   display: flex;
@@ -46,8 +48,8 @@ export const ExperienceContainer = styled.div`
     z-index: -1;
     left: 0;
     top: 0;
-    border-left: ${border};
-    border-top: ${border};
+    border-left: ${(props) => props.theme.border};
+    border-top: ${(props) => props.theme.border};
   }
 `;
 

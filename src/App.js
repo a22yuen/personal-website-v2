@@ -28,17 +28,16 @@ function App() {
 
   useEffect(() => {
     music.current.volume = `0.1`;
-    if (isDark && !startMusic) {
-      music.current.play();
-    } else {
-      music.current.pause();
-      music.current.currentTime = 0;
-    }
+    isDark ? music.current.play() : music.current.pause();
   }, [isDark]);
 
   return (
     <ThemeProvider
-      theme={isDark ? { ...dark, toggleDark } : { ...light, toggleDark }}
+      theme={
+        isDark
+          ? { ...dark, toggleDark, isDark }
+          : { ...light, toggleDark, isDark }
+      }
     >
       <audio src={vibes} ref={music} />
       <GlobalStyle />

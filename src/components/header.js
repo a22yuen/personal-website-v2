@@ -4,6 +4,7 @@ import Flowey from "../assets/flowey.png";
 import Moon from "../assets/moon.svg";
 import Sun from "../assets/sun.svg";
 import { useTheme } from "styled-components";
+import { Link } from "react-router-dom";
 
 const Nav = styled.header`
   margin: auto;
@@ -58,7 +59,7 @@ const Playing = styled.a`
   }
 `;
 
-const NavLinks = styled(NavLink)`
+const NavLinks = styled(Link)`
   text-decoration: none;
   margin-right: 7px;
   color: inherit;
@@ -72,11 +73,10 @@ const NavLinks = styled(NavLink)`
 `;
 
 export default function Header() {
-  const { backgroundColor, toggleDark } = useTheme();
+  const { backgroundColor, toggleDark, isDark } = useTheme();
 
   const toggleTheme = () => {
     toggleDark();
-    setMusic(!playMusic);
   };
 
   return (
@@ -85,14 +85,14 @@ export default function Header() {
         Anson Yuen
         <Icon src={Flowey} />
         <Button onClick={toggleTheme}>
-          <ToggleIcon src={backgroundColor === "black" ? Sun : Moon} />
+          <ToggleIcon src={isDark ? Sun : Moon} />
         </Button>
       </Title>
       <NavLinks to="/">about</NavLinks>|
       <NavLinks style={{ marginLeft: "7px" }} to="/experience">
         experience
       </NavLinks>
-      {playMusic ? (
+      {isDark ? (
         <Playing
           target="_blank"
           href="https://www.youtube.com/watch?v=zNd4apsr3WE"

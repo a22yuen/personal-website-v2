@@ -65,7 +65,7 @@ export const Jobs = () => {
                 <Company target="_blank" href={link}>
                   {company}
                 </Company>{" "}
-                | <Subtitle>{date}</Subtitle>
+                <Subtitle> | {date}</Subtitle>
               </Title>
               <Tech>
                 {location} | {tech}

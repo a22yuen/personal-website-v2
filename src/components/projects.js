@@ -41,7 +41,7 @@ export const Projects = () => {
               <Link href={link} target="_blank">
                 {project}
               </Link>{" "}
-              | <Subtitle>{tech}</Subtitle>
+              <Subtitle> | {tech}</Subtitle>
             </Title>
             <Description>{description}</Description>
           </ExperienceContainer>

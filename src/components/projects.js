@@ -38,7 +38,10 @@ export const Projects = () => {
         return (
           <ExperienceContainer key={project}>
             <Title>
-              <Link href={link}>{project}</Link> | <Subtitle>{tech}</Subtitle>
+              <Link href={link} target="_blank">
+                {project}
+              </Link>{" "}
+              | <Subtitle>{tech}</Subtitle>
             </Title>
             <Description>{description}</Description>
           </ExperienceContainer>

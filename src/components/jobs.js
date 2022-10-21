@@ -61,8 +61,11 @@ export const Jobs = () => {
           return (
             <ExperienceContainer key={company}>
               <Title>
-                {role} @ <Company href={link}>{company}</Company> |{" "}
-                <Subtitle>{date}</Subtitle>
+                {role} @{" "}
+                <Company target="_blank" href={link}>
+                  {company}
+                </Company>{" "}
+                | <Subtitle>{date}</Subtitle>
               </Title>
               <Tech>
                 {location} | {tech}

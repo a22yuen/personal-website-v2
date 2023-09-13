@@ -24,11 +24,11 @@ export default function Home() {
         </Title>
         <AboutMe>
           I'm Anson, a third-year computer science student in University of
-          Waterloo. I'm currently interning as a Software Developer at{" "}
-          <Link href="https://citylitics.com/" target="_blank">
-            Citylitics
+          Waterloo. I've recently completed my internship as a Software Developer Intern at{" "}
+          <Link href="https://www.konrad.com/" target="_blank">
+            Konrad Group
           </Link>
-          .
+          . I'm currently seeking a Winter 2023 internship!
           <br />
           <br />
           I'm always focused on building and working on projects that leave a

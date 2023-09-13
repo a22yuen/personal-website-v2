@@ -77,9 +77,8 @@ export const Description = styled.h4`
 
 export const Link = styled.a`
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
   &:hover {
-    text-decoration: underline;
     cursor: pointer;
   }
 `;

@@ -10,13 +10,24 @@ import {
 
 const jobs = [
   {
-    role: "Software Engineer",
+    role: "Software Developer Intern",
+    company: "Konrad Group",
+    date: "Summer 2023",
+    location: "Toronto",
+    tech: "PyTorch, Docker, PostgreSQL, Pandas",
+    description:
+      "Created a microservice to categorize bank transactions using NLP text classification.",
+    link: "https://www.konrad.com/",
+    icon: "",
+  },
+  {
+    role: "Full Stack Developer",
     company: "Citylitics",
     date: "Fall 2022",
     location: "Toronto",
     tech: "React, Django, Docker, GCP",
     description:
-      "Implement developer tools to assist with entity relationship visualization, and organized documentation to outline company features.",
+      "Implemented developer tools to assist with entity relationship visualization, and organized documentation to outline company features.",
     link: "https://citylitics.com/",
     icon: "",
   },

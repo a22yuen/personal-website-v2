@@ -23,12 +23,16 @@ export default function Home() {
           <h1>Hey!</h1>
         </Title>
         <AboutMe>
-          I'm Anson, a third-year computer science student in University of
+          I'm Anson, a Fourth-year computer science student at the University of
           Waterloo. I've recently completed my internship as a Software Developer Intern at{" "}
           <Link href="https://www.konrad.com/" target="_blank">
             Konrad Group
           </Link>
-          . I'm currently seeking a Winter 2023 internship!
+          , and I'll be starting in January 2024 as a Software Engineer Intern at {" "}
+          <Link href="https://www.zanbato.com/" target="_blank">
+            Zanbato 
+          </Link>
+          . I'm currently seeking a Summer 2024 internship!
           <br />
           <br />
           I'm always focused on building and working on projects that leave a

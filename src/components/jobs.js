@@ -27,7 +27,7 @@ const jobs = [
     location: "Toronto",
     tech: "React, Django, Docker, GCP",
     description:
-      "Implemented developer tools to assist with entity relationship visualization, and organized documentation to outline company features.",
+      "Implemented a new visualization structure for displaying business opportunities to clients, decoupling customer-specific insights, and increasing total deliverable data.",
     link: "https://citylitics.com/",
     icon: "",
   },
@@ -49,7 +49,7 @@ const jobs = [
     location: "Toronto",
     tech: "Vue.js, Typescript, AWS S3 & Lambda, Serverless Framework",
     description:
-      "Developed Lambda microservice to dynamically generate pdf reports for clients.",
+      "Developed a Lambda microservice to dynamically generate pdf reports for clients.",
     link: "https://www.lcbonext.com/",
     icon: "",
   },

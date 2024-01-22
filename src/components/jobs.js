@@ -10,6 +10,17 @@ import {
 
 const jobs = [
   {
+    role: "Software Engineer Intern",
+    company: "Zanbato",
+    date: "Winter 2024",
+    location: "Mountain View",
+    tech: "React, Django, PostgreSQL",
+    description:
+      "Building APIs for Zanbato's data platform to provide clients with a view of the platform's tickets.",
+    link: "https://www.zanbato.com/",
+    icon: "",
+  },
+  {
     role: "Software Developer Intern",
     company: "Konrad Group",
     date: "Summer 2023",

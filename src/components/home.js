@@ -24,15 +24,11 @@ export default function Home() {
         </Title>
         <AboutMe>
           I'm Anson, a Fourth-year computer science student at the University of
-          Waterloo. I've recently completed my internship as a Software Developer Intern at{" "}
-          <Link href="https://www.konrad.com/" target="_blank">
-            Konrad Group
-          </Link>
-          , and I'll be starting in January 2024 as a Software Engineer Intern at {" "}
+          Waterloo. I'm currently a Software Engineer Intern at {" "}
           <Link href="https://www.zanbato.com/" target="_blank">
             Zanbato 
           </Link>
-          . I'm currently seeking a Summer 2024 internship!
+          . I'm currently seeking a Summer 2024 or Fall 2024 internship!
           <br />
           <br />
           I'm always focused on building and working on projects that leave a

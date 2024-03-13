@@ -23,7 +23,7 @@ export default function Home() {
           <h1>Hey!</h1>
         </Title>
         <AboutMe>
-          I'm Anson, a Fourth-year computer science student at the University of
+          I'm Anson, a fourth-year computer science student at the University of
           Waterloo. I'm currently a Software Engineer Intern at {" "}
           <Link href="https://www.zanbato.com/" target="_blank">
             Zanbato 

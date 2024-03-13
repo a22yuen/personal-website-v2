@@ -5,6 +5,13 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./fonts/Atkinson-Hyperlegible-Regular.ttf";
 import "./fonts/Atkinson-Hyperlegible-Bold.ttf";
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: process.env.REACT_APP_GTM_ID
+}
+
+TagManager.initialize(tagManagerArgs)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
